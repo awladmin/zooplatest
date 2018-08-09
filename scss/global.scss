@@ -1,0 +1,93 @@
+/* General */
+html {
+    font-size: 62.5%;     
+}
+body {
+    font-family:$font-family;
+    font-size: 1.5rem;
+    color:$primary-color;
+    margin:0;
+    line-height:1.4;
+}
+* {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family:$font-family;
+    margin:0 0 1rem;
+}
+address {
+    font-style: normal;
+}
+img {
+    max-width:100%;
+}
+p {
+    margin:0 0 1.2rem;
+}
+h1 {
+    font-size:2.5rem;
+}
+h2 {
+    font-size:2rem;
+}
+h3 {
+    font-size:1.75rem;
+}
+h4 {
+    font-size:1.5rem;
+}
+h5 {
+    font-size:1.25rem;
+}
+h6 {
+    font-size:1rem;
+}
+
+/* Utility Helpers */
+
+.subtle-header {
+    font-size:1.5rem;
+    margin-bottom:3.2rem;
+}
+
+.container {
+    padding:3.2rem;
+    min-width:320px;
+}
+.buttons {
+    padding:0.8rem 2rem;
+    &.primary {
+        background:$primary-button-bg;
+        border:1px solid $formborders;
+    }
+}
+.hidden {
+    display:none;
+}
+
+/* Forms */
+input, select {
+    padding:0.8rem;
+    border:1px solid $formborders;
+}
+
+/* Medium Device Styles */
+@media screen and (min-width: $medium-device-min) and (max-width:$medium-device-max) {
+    .container {
+        padding:2.4rem;
+    }
+    .subtle-header {
+        margin-bottom:2.4rem;
+    }    
+}
+
+/* Small Device Styles */
+@media screen and (max-width:$small-device-max) {
+    .container {
+        padding:1.6rem;
+    }  
+    .subtle-header {
+        margin-bottom:1.6rem;
+    }    
+}

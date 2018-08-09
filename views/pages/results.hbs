@@ -1,0 +1,36 @@
+{{#if data.noResults}}
+    <h2>No results found</h2>
+    <p>Please enter another location and search again</p>
+    {{> searchform}}    
+{{else}}
+<h3 class="subtle-header">{{data.count}} result(s) found</h3>
+<section class="property-listings">
+    <ul>
+        {{#each data.listings}}
+        <li>
+            <article>
+                <div class="property-listings__property-image-wrap">
+                    <a href="{{this.url}}">
+                        <img class="property-listings__image" src="{{this.image}}" alt="{{this.title}}" />
+                    </a>
+                </div>
+                <div class="property-listings__property-details">
+                    <h3>{{this.title}}</h3>
+                    <h4>{{this.price}}</h4>
+                    <p>{{this.description}}</p>
+                </div>
+                <div class="property-listings__agent-details">
+                    <address>
+                        <img src="{{this.agent.logo}}" alt="{{this.agent.name}}" class="property-listings__agent-logo" />
+                        <p>{{this.agent.name}}</p>
+                        <p>{{this.agent.address}}</p>
+                        <p>T: {{this.agent.phone}}</p>
+                    </address>
+                </div> 
+            </article>
+        </li>
+        {{/each}}
+    </ul>
+</section>
+{{/if}}
+

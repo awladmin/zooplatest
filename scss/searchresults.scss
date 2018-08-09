@@ -1,0 +1,90 @@
+/* Search Results */
+.property-listings {
+    ul {
+        margin:0;
+        padding:0;
+        list-style: none;
+        li {
+            margin:0;
+            padding:0 0 6.4rem;
+        }
+    }
+    article {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-gap: 3.2rem;
+    }
+    &__property-image {
+        img {
+            width:100%;
+            display: block;
+            border:1px solid $formborders;
+        }
+    }
+    &__property-details {
+        h4 {
+            @include price;
+        }
+    }
+    &__agent-details {
+        address {
+            background: $address-bg;
+            padding:0.8rem;
+            p, img {
+                margin-bottom:0.4rem;
+                font-size:1.4rem;
+            }
+        }
+    }
+}
+
+/* Medium Device Styles */
+@media screen and (min-width: $medium-device-min) and (max-width:$medium-device-max) {
+    .property-listings {
+        ul li {
+            padding-bottom:4.8rem;
+        }
+        article {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            grid-gap: 2.4rem;
+        }        
+        &__agent-details {
+            grid-column: span 2;
+            background:$address-bg;
+            address {
+                display:inline-grid;
+                grid-gap: 2.4rem;
+                grid-template-columns: auto auto auto auto;   
+                align-items: center;             
+                img, p {                    
+                    display: inline-block;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }    
+}
+/* Small Device Styles */
+@media screen and (max-width:$small-device-max) {
+    .property-listings {
+        ul li {
+            padding-bottom:3.2rem;
+        }
+        article {
+            display: block;
+        }  
+        &__property-image {            
+            width:auto;
+            margin-bottom:1.2rem;            
+        }      
+        &__agent-details {            
+            address {
+                display:block;                
+                img, p {                    
+                    display: block;
+                }
+            }
+        }
+    }    
+}

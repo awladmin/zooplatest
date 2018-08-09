@@ -1,0 +1,23 @@
+{{!-- Master layout, please fill in all necessary markup --}}
+<!doctype html>
+<html class="accessibility" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{title}}</title>
+        <meta name="description" content="{{pagedesc}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        
+        <main class="container" id="page">
+            {{{body}}}
+        </main>
+           
+        {{#if scriptsrc}}
+        <script src="{{scriptsrc}}"></script>
+        {{/if}}
+    </body>
+</html>
+

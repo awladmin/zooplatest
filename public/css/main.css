@@ -1,0 +1,170 @@
+/* 
+    Author: Dan Jordan
+    Desc: Test for Zoolpa
+*/
+/* Break Points */
+/* General */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #222222;
+  margin: 0;
+  line-height: 1.4; }
+
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, sans-serif;
+  margin: 0 0 1rem; }
+
+address {
+  font-style: normal; }
+
+img {
+  max-width: 100%; }
+
+p {
+  margin: 0 0 1.2rem; }
+
+h1 {
+  font-size: 2.5rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.75rem; }
+
+h4 {
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1.25rem; }
+
+h6 {
+  font-size: 1rem; }
+
+/* Utility Helpers */
+.subtle-header {
+  font-size: 1.5rem;
+  margin-bottom: 3.2rem; }
+
+.container {
+  padding: 3.2rem;
+  min-width: 320px; }
+
+.buttons {
+  padding: 0.8rem 2rem; }
+  .buttons.primary {
+    background: #cccccc;
+    border: 1px solid #999999; }
+
+.hidden {
+  display: none; }
+
+/* Forms */
+input, select {
+  padding: 0.8rem;
+  border: 1px solid #999999; }
+
+/* Medium Device Styles */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    padding: 2.4rem; }
+  .subtle-header {
+    margin-bottom: 2.4rem; } }
+
+/* Small Device Styles */
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 1.6rem; }
+  .subtle-header {
+    margin-bottom: 1.6rem; } }
+
+/* Modules */
+/* Search Form */
+.search-property__field {
+  display: -ms-grid;
+  display: inline-grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: 1fr auto;
+  width: 100%; }
+
+.search-property__input {
+  width: 100%; }
+
+.search-property__form-errors {
+  background: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+  padding: 0.8rem;
+  margin-top: 1.2rem;
+  border-radius: 0.4rem; }
+
+/* Search Results */
+.property-listings ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .property-listings ul li {
+    margin: 0;
+    padding: 0 0 6.4rem; }
+
+.property-listings article {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-gap: 3.2rem; }
+
+.property-listings__property-image img {
+  width: 100%;
+  display: block;
+  border: 1px solid #999999; }
+
+.property-listings__property-details h4 {
+  color: #ff0000;
+  font-size: 2rem; }
+
+.property-listings__agent-details address {
+  background: #cccccc;
+  padding: 0.8rem; }
+  .property-listings__agent-details address p, .property-listings__agent-details address img {
+    margin-bottom: 0.4rem;
+    font-size: 1.4rem; }
+
+/* Medium Device Styles */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .property-listings ul li {
+    padding-bottom: 4.8rem; }
+  .property-listings article {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 2.4rem; }
+  .property-listings__agent-details {
+    grid-column: span 2;
+    background: #cccccc; }
+    .property-listings__agent-details address {
+      display: inline-grid;
+      grid-gap: 2.4rem;
+      grid-template-columns: auto auto auto auto;
+      align-items: center; }
+      .property-listings__agent-details address img, .property-listings__agent-details address p {
+        display: inline-block;
+        margin-bottom: 0; } }
+
+/* Small Device Styles */
+@media screen and (max-width: 767px) {
+  .property-listings ul li {
+    padding-bottom: 3.2rem; }
+  .property-listings article {
+    display: block; }
+  .property-listings__property-image {
+    width: auto;
+    margin-bottom: 1.2rem; }
+  .property-listings__agent-details address {
+    display: block; }
+    .property-listings__agent-details address img, .property-listings__agent-details address p {
+      display: block; } }
