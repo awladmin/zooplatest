@@ -14,7 +14,7 @@
     "watch:server": "onchange \"server/**/*.js\" \"test/server/**/**/*.js\" -- npm run test -s",
     "dev:server": "npm-run-all -p start-dev watch:server",
     "build-css": "node-sass --include-path scss scss/main.scss public/css/main.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css && npm start\"",
+    "watch-css": "nodemon -e scss -x \"npm run build-css && npm run dev\"",
     "dev": "npm-run-all -p start-dev watch:*",
     "predev": "npm run build"
   },

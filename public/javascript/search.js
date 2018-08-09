@@ -16,9 +16,9 @@ const HeaderSearch = function() {
 
     function submitSearch(evt){        
         const searchForm = document.querySelector('[data-form]');
-        const searchField = document.querySelector('[data-search-term]');        
+        const searchField = searchForm.querySelector('[data-search-term]');        
         if(!searchField.value){
-            showError("This field cannot be empty");
+            showError("This field cannot be empty");//move error text to text file
             evt.preventDefault();
             return false;
         }
